@@ -1,4 +1,4 @@
-def rewrite_file(path1=None, path2=None, path3=None):
+def rewrite_file(path1, path2, path3):
     final_file = "4.txt"
     with open(path1, 'r') as f1:
         file1 = f1.readlines()
@@ -7,7 +7,6 @@ def rewrite_file(path1=None, path2=None, path3=None):
     with open(path3, 'r') as f3:
         file3 = f3.readlines()
     with open(final_file, 'w') as f_total:
-
         if len(file1) < len(file2) and len(file1) < len(file3):
             f_total.write(path1 + '\n')
             f_total.write(str(len(file1)) + '\n')
